@@ -151,3 +151,15 @@ html {
     column-count: 2;
   }
 }
+.ghfooter {
+	  position: fixed;
+	    left: 0;
+	      bottom: 0;
+	        width: 100%;
+		  background-color: #E5E5E5;
+		    color: #8D857A;
+		      text-align: center;
+		        max-height: 5%;
+			  font-size: .5em;
+			    margin-bottom: 0;
+		    }
