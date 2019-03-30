@@ -28,7 +28,8 @@ mongoose.connect('mongodb://localhost:27017/museum', {
 // Create a scheme for items in the museum: a title and a path to an image.
  const itemSchema = new mongoose.Schema({
    title: String,
-     path: String,
+   path: String,
+   story: String,
      });
 
 // Create a model for items in the museum.
@@ -48,9 +49,10 @@ app.post('/api/photos', upload.single('photo'), async (req, res) => {
 
 // Create a new item in the museum: takes a title and a path to an image.
 	app.post('/api/items', async (req, res) => {
-		  const item = new Item({
+		const item = new Item({
 			      title: req.body.title,
 			      path: req.body.path,
+			      story: req.body.story,
 			    });
 		  try {
 			      await item.save();
@@ -84,11 +86,13 @@ app.delete('/api/items/:id', async (req, res) => {
 
 app.put('/api/items/:id', async (req, res) => {
   try {
-  	let item = await Item.findOne(req.id);
-	item.title = req.body.title;
+	let editItem = await Item.findOne(req.id);
+	console.log(editItem.id);
+	editItem.title = await req.body.title;
+	editItem.story = await req.body.story;
 
-	await item.save();
-	res.send(item);
+	await editItem.save();
+	res.send(editItem);
   } catch (error) {
   	console.log(error);
 	  res.sendStatus(500);

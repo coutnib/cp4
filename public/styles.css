@@ -1,31 +1,49 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  background: #fff;
+  background: #FECEA8;
   padding: 0px;
   margin: 0px;
+  text-align: center;
 }
-
+.storybox {
+  width: 100%;
+  height: 10em;
+  text-align: center;
+}
+.heading {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* Header */
 .header {
   display: flex;
   padding: 20px 100px 0px 100px;
-  background-color: #5BDEFF;
+  background-color: #E84A5F;
   color: #fff;
+  text-align: center;
 }
 
 .title {
   margin-top: 10px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .title h1, .title h2 {
   margin: 0px;
+  text-align: center;
 }
 
 .title h1 {
-  border-top: 1px solid #000;
+ 	text-align: center; 
 }
-
+.logoimg {
+	max-width: 15.5%;
+	height: auto;
+}
 /* Footer */
 .footer {
   height: 50px;
@@ -38,12 +56,22 @@ body {
 
 /* Content */
 .content {
-  padding: 20px 100px 0px 100px;
+  	text-align: center;
+	padding: 0px 100px 0px 100px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
-
+p {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 .image h2 {
   font-style: italic;
   font-size: 1em;
+  text-align: center;
 }
 
 /* Admin */
@@ -51,15 +79,20 @@ body {
   display: flex;
   margin-bottom: 20px;
   margin-top: 20px;
+  text-align: center;
 }
 
 .heading h2 {
-  margin: 0px;
-  margin-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .add, .edit {
-  display: flex;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .circle {
@@ -76,15 +109,19 @@ body {
 input, textarea, select, button {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
+  text-align: center;
 }
 
 .form {
-  margin-right: 50px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Uploaded images */
 .upload h2 {
   margin: 0px;
+  text-align: center;
 }
 
 .upload img {
@@ -95,6 +132,9 @@ input, textarea, select, button {
 .suggestions {
   width: 200px;
   border: 1px solid #ccc;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .suggestion {
@@ -109,6 +149,7 @@ input, textarea, select, button {
 /* Masonry */
 html {
   box-sizing: border-box;
+  text-align: center;
 }
 
 *,
@@ -118,7 +159,7 @@ html {
 }
 
 .image-gallery {
-  column-gap: 1.5em;
+ 
 }
 
 .image {
@@ -131,25 +172,32 @@ html {
   width: 100%;
 }
 
-/* Masonry on large screens */
+/* Masonry on large screens 
 @media only screen and (min-width: 1024px) {
   .image-gallery {
     column-count: 4;
   }
 }
 
-/* Masonry on medium-sized screens */
+/* Masonry on medium-sized screens 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
   .image-gallery {
     column-count: 3;
   }
 }
 
-/* Masonry on small screens */
+/* Masonry on small screens 
 @media only screen and (max-width: 767px) and (min-width: 540px) {
   .image-gallery {
     column-count: 2;
   }
+}*/
+.illustration{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 20em;
+	height: auto;
 }
 .ghfooter {
 	  position: fixed;
@@ -162,4 +210,21 @@ html {
 		        max-height: 5%;
 			  font-size: .5em;
 			    margin-bottom: 0;
-		    }
+}
+/* Menu */
+nav.bg-light {
+	background-color: #E84A5F !important;
+} 
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+	color: #FF847C !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff !important;
+}
+.nav-item active {
+	color: #2A363B !important; 
+}
+img.navbar-brand {
+	max-width: 5.5%;
+	height: auto;
+}
